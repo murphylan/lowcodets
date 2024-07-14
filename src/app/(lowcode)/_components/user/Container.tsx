@@ -7,13 +7,14 @@ import ColorPicker from 'material-ui-color-picker'
 interface ContainerProps {
   background: string;
   padding: number;
+  height: string;
   children: React.ReactNode;
 }
 
-export const Container = ({ background, padding = 0, children }: ContainerProps) => {
+export const Container = ({ background, padding = 0, height = "auto", children }: ContainerProps) => {
   const { connectors: { connect, drag } } = useNode();
   return (
-    <Paper ref={ref => connect(drag(ref as any))} style={{ background, padding: `${padding}px` }}>
+    <Paper ref={ref => connect(drag(ref as any))} style={{ background, padding: `${padding}px`, height }}>
       {children}
     </Paper>
   )

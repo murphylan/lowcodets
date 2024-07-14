@@ -24,36 +24,42 @@ export const Sidebar = () => {
     <Box px={2} py={2}>
       <Grid container direction="column" alignItems="center" spacing={1}>
         <Box pb={2}>
-          <Typography>拖动以添加</Typography>
+          <Typography>组件列表</Typography>
         </Box>
         <Grid container direction="column" item>
           <IconButton ref={ref => connectors.create(ref as any, <Button size="small">Click me</Button>)}>
-            按钮<AddCircleOutlineIcon />
+            <AddCircleOutlineIcon />
+            <Typography variant="caption">按钮</Typography>
           </IconButton>
         </Grid>
         <Grid container direction="column" item>
           <IconButton ref={ref => connectors.create(ref as any, <Text text="Hi world" />)}>
-            文本<TextFieldsIcon />
+            <TextFieldsIcon />
+            <Typography variant="caption">文本</Typography>
           </IconButton>
         </Grid>
         <Grid container direction="column" item>
-          <IconButton ref={ref => connectors.create(ref as any, <Element is={Container} padding={20} canvas children={undefined} background={""} />)}>
-            容器<ViewQuiltIcon />
+          <IconButton ref={ref => connectors.create(ref as any, <Element is={Container} padding={20} canvas children={undefined} background={""} height={"auto"} />)}>
+            <ViewQuiltIcon />
+            <Typography variant="caption">容器</Typography>
           </IconButton>
         </Grid>
         <Grid container direction="column" item>
           <IconButton ref={ref => connectors.create(ref as any, <Card />)}>
-            卡片<CardGiftcardIcon />
+            <CardGiftcardIcon />
+            <Typography variant="caption">卡片</Typography>
           </IconButton>
         </Grid>
         <Grid container direction="column" item>
           <IconButton ref={ref => connectors.create(ref as any, <CustomForm />)}>
-            表单<DescriptionIcon />
+            <DescriptionIcon />
+            <Typography variant="caption">表单</Typography>
           </IconButton>
         </Grid>
         <Grid container direction="column" item>
           <IconButton ref={ref => connectors.create(ref as any, <Element is={Dropdown} id="dropdown1" canvas options={['Option 1', 'Option 2', 'Option 3']} />)}>
-            下拉框<ArrowDropDownCircleIcon />
+            <ArrowDropDownCircleIcon />
+            <Typography variant="caption">下拉框</Typography>
           </IconButton>
         </Grid>
       </Grid>

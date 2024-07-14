@@ -42,7 +42,7 @@ CardBottom.craft = {
 
 export const Card = ({ background, padding = 20 }: { background?: string; padding?: number }) => {
   return (
-    <Container background={background? background : "white"} padding={padding} >
+    <Container background={background ? background : "white"} padding={padding} height="auto">
       <Element id="text" is={CardTop} canvas > // 类型为 CardTop 的 Canvas 节点
         <Text text="Title" fontSize={20} />
         <Text text="Subtitle" fontSize={15} />

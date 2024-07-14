@@ -1,6 +1,7 @@
 "use client"
 
 import { Editor, Frame, useEditor } from "@craftjs/core";
+import { useRouter } from 'next/navigation';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Button as MaterialButton, Snackbar, TextField } from "@material-ui/core";
 import lz from "lzutf8";
 import { useState } from "react";
@@ -21,7 +22,7 @@ const EditorActions = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [stateToLoad, setStateToLoad] = useState("");
-
+  const router = useRouter();
   return (
     <>
       <MaterialButton
@@ -33,7 +34,15 @@ const EditorActions = () => {
       >
         Load
       </MaterialButton>
-      <Link href="/">返回</Link>
+      <MaterialButton
+        className="load-state-btn"
+        size="small"
+        variant="outlined"
+        color="secondary"
+        onClick={() => { router.push('/'); }}
+      >
+        返回编辑器
+      </MaterialButton>
       <Dialog
         open={dialogOpen}
         onClose={() => setDialogOpen(false)}

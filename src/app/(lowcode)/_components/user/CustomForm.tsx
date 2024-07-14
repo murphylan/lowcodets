@@ -75,7 +75,7 @@ const CustomForm = ({ background, padding = 20 }: CustomFormProps) => {
   };
 
   return (
-    <Container background={background ? background : "white"} padding={padding}>
+    <Container background={background ? background : "white"} padding={padding} height={"auto"}>
       <Element is={Form} id="form" canvas>
         <Element
           is={Input}

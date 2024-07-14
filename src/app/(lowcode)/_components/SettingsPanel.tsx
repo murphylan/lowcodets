@@ -28,7 +28,7 @@ export const SettingsPanel = () => {
           <Box pb={2}>
             <Grid container alignItems="center">
               <Grid item xs><Typography variant="subtitle1">Selected</Typography></Grid>
-              <Grid item><Chip size="small" color="primary" label="Selected" /></Grid>
+              <Grid item><Chip size="small" color="primary" label={selected.name} /></Grid>
             </Grid>
           </Box>
         </Grid>
